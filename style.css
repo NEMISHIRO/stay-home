@@ -1,0 +1,881 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Serif JP', serif;
+
+}
+
+body {
+    position: relative;
+    top: 0;
+    left: 0;
+    font-size: 62.5%;
+    line-height: 1.8;
+    margin: 0;
+    overflow-x: hidden;
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#first #p1 {
+
+    font-size: 62px;
+    text-align: center;
+    padding-top: 258px;
+    
+}
+
+#explan .p1 {
+    font-size: 25px;
+    padding-top: 260px;
+    text-align: center;
+}
+
+#explan .p2 {
+    font-size: 25px;
+    padding-top: 60px;
+    text-align: center;
+}
+
+.popup {
+    background-color: #F6F6E1;
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, .8);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
+    width: 70vw;
+    height: 48vw;
+    overflow-y: scroll;
+    overscroll-behavior:fixed;
+    
+    
+   
+
+
+}
+
+
+
+
+
+
+/* living　↓*/
+
+/* チェックボックスの初期設定 */
+#popup-on-music {
+    display: none;
+}
+
+/* チェックされたらポップアップウインドウを開く */
+#popup-on-music:checked + .popup {
+    display: block;
+    
+    
+}
+
+#popup-on-music:checked + body {
+
+    
+}
+
+
+
+/* 吹き出しの位置とかの設定 */
+.f-music {
+    display: none;
+    position: absolute;
+    right: 170px;
+    top: -230px;
+}
+
+.layer-img:hover + .f-music {
+    display: block;
+}
+
+.perfect {
+    position: absolute;
+    display: inline-block;
+    font-weight: bold;
+    top: 64%;
+    left: 21%;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #AD383E;
+    transition: .4s;
+
+}
+
+.perfect:hover {
+    background:  #D8A0A3;
+}
+
+
+
+.born {
+    position: absolute;
+    display: inline-block;
+    font-weight: bold;
+    top: 110%;
+    left: 50%;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #AD383E;
+    transition: .4s;
+
+}
+
+.born:hover {
+    background:  #D8A0A3;
+}
+
+
+
+.kinmokusei {
+    position: absolute;
+    display: inline-block;
+    font-weight: bold;
+    top: 168%;
+    left: 22%;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #AD383E;
+    transition: .4s;
+
+}
+
+.kinmokusei:hover {
+    background:  #D8A0A3;
+}
+
+.kaizoku {
+    position: absolute;
+    display: inline-block;
+    font-weight: bold;
+    top: 232%;
+    left: 51%;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #AD383E;
+    transition: .4s;
+
+}
+
+.kaizoku:hover {
+    background:  #D8A0A3;
+}
+
+.mahou {
+    position: absolute;
+    display: inline-block;
+    font-weight: bold;
+    top: 240%;
+    left: 51%;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #AD383E;
+    transition: .4s;
+
+}
+
+.mahou:hover {
+    background:  #D8A0A3;
+}
+
+
+.kusuri {
+    position: absolute;
+    display: inline-block;
+    font-weight: bold;
+    top: 232%;
+    left: 66%;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #AD383E;
+    transition: .4s;
+
+}
+
+.kusuri:hover {
+    background:  #D8A0A3;
+}
+
+.yoi {
+    position: absolute;
+    display: inline-block;
+    font-weight: bold;
+    top: 240%;
+    left: 66%;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #AD383E;
+    transition: .4s;
+
+}
+
+.yoi:hover {
+    background:  #D8A0A3;
+}
+
+
+
+
+
+/* 閉じるアイコン（右上）1つしか書いてない必要だったらそれぞれ書く */
+.icon-close {
+    background: #AD383E;
+    color: #fff;
+    font-size: 30px;
+    padding: 0 10px;
+    position: absolute;
+    right: 0;
+}
+
+/* 閉じるボタン  1つしか書いてない必要だったらそれぞれ書く */
+.btn-close {
+    background: #AD383E;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px auto;
+    width: 44%;
+    text-align: center;
+}
+
+/* 開くボタンの位置指定とか*/
+.btn-open-music {
+
+    color: #fff;
+    position: absolute;
+    cursor: pointer;
+    right: 67%;
+    top: 47%;
+    text-align: center;
+}
+
+/* ポップアップの内容  1つしか書いてない必要だったらそれぞれ書く*/
+.popup-content {
+    /* margin: 40px auto 40px auto;*/
+    /* width: 500%;
+        height: 100vh;*/
+    background-size: cover;
+    text-align: center;
+    
+
+}
+
+
+
+#popup-on-relax {
+    display: none;
+}
+
+/* チェックされたらポップアップウインドウを開く */
+#popup-on-relax:checked + .popup {
+    display: block;
+}
+
+
+/* 吹き出しの位置とかの設定 */
+.f-relax {
+    display: none;
+    position: absolute;
+    right: 180px;
+    top: -130px;
+}
+
+.layer-img:hover + .f-relax {
+    display: block;
+}
+
+
+
+/* 開くボタンの位置指定とか*/
+.btn-open-relax {
+
+    color: #fff;
+    position: absolute;
+    cursor: pointer;
+    right: 35%;
+    top: 46%;
+    text-align: center;
+}
+
+
+.ni-fukkin {
+    position: absolute;
+    display: inline-block;
+    font-weight: bold;
+    top: 720px;
+    left: 210px;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #AD383E;
+    transition: .4s;
+}
+
+.ni-fukkin:hover {
+    background:  #D8A0A3;
+}
+
+
+
+
+
+.mayo {
+    position: absolute;
+    display: inline-block;
+    font-weight: bold;
+    top: 600px;
+    left: 210px;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #AD383E;
+    transition: .4s;
+}
+
+.mayo:hover {
+    background:  #D8A0A3;
+}
+
+
+.kafukubu {
+    position: absolute;
+    display: inline-block;
+    font-weight: bold;
+    top: 640px;
+    left: 210px;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #AD383E;
+    transition: .4s;
+}
+
+.kafukubu:hover {
+    background:  #D8A0A3;
+}
+
+.asiyase {
+    position: absolute;
+    display: inline-block;
+    font-weight: bold;
+    top: 680px;
+    left: 210px;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #AD383E;
+    transition: .4s;
+}
+
+.asiyase:hover {
+    background: #D8A0A3;
+}
+
+
+.me {
+    position: absolute;
+    display: inline-block;
+    font-weight: bold;
+    top: 1520px;
+    left: 210px;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #AD383E;
+    transition: .4s;
+}
+
+.me:hover {
+    background: #D8A0A3;
+}
+
+
+
+
+
+#popup-on-video {
+    display: none;
+}
+
+/* チェックされたらポップアップウインドウを開く */
+#popup-on-video:checked + .popup {
+    display: block;
+}
+
+
+/* 吹き出しの位置とかの設定 */
+.f-video {
+    display: none;
+    position: absolute;
+    right: 27px;
+    top: 29px;
+}
+
+.layer-img:hover + .f-video {
+    display: block;
+}
+
+
+
+/* 開くボタンの位置指定とか*/
+.btn-open-video {
+
+    color: #fff;
+    position: absolute;
+    cursor: pointer;
+    right: 1%;
+    top: 32%;
+    text-align: center;
+}
+
+
+
+/* living　↑　*/
+
+/* kitchen ↓　*/
+
+#popup-on-cooking {
+    display: none;
+}
+
+/* チェックされたらポップアップウインドウを開く */
+#popup-on-cooking:checked + .popup {
+    display: block;
+}
+
+
+/* 吹き出しの位置とかの設定 */
+.f-cooking {
+    display: none;
+    position: absolute;
+    right: 90px;
+    top: -130px;
+}
+
+
+.layer-img:hover + .f-cooking {
+    display: block;
+}
+
+
+.omuraisu {
+    position: absolute;
+    display: inline-block;
+    font-weight: bold;
+    top: 65%;
+    left: 19%;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #AD383E;
+    transition: .4s;
+}
+
+.omuraisu:hover {
+    background: #D8A0A3;
+}
+
+.bata-omuraisu {
+    position: absolute;
+    display: inline-block;
+    font-weight: bold;
+    top: 70%;
+    left: 19%;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background:#AD383E;
+    transition: .4s;
+
+}
+
+.bata-omuraisu:hover {
+    background:  #D8A0A3;
+}
+
+
+
+
+.paikanntann {
+    position: absolute;
+    display: inline-block;
+    font-weight: bold;
+    top: 117%;
+    left: 51%;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #AD383E;
+    transition: .4s;
+}
+
+.paikanntann:hover {
+    background:  #D8A0A3;
+}
+
+.kissyu {
+    position: absolute;
+    display: inline-block;
+    font-weight: bold;
+    top: 123%;
+    left: 51%;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background:  #AD383E;
+    transition: .4s;
+
+}
+
+.kissyu:hover {
+    background:  #D8A0A3;
+}
+
+.apple {
+    position: absolute;
+    display: inline-block;
+    font-weight: bold;
+    top: 129%;
+    left: 51%;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #AD383E;
+    transition: .4s;
+
+}
+
+.apple:hover {
+    background:  #D8A0A3;
+}
+
+.fuwatoro{
+    position: absolute;
+    display: inline-block;
+    font-weight: bold;
+    top: 170%;
+    left: 19%;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background:#AD383E;
+    transition: .4s;
+
+}
+
+.fuwatoro:hover {
+    background:  #D8A0A3;
+}
+
+
+
+
+/* 開くボタンの位置指定とか*/
+.btn-open-cooking {
+
+    color: #fff;
+    position: absolute;
+    cursor: pointer;
+    right: 28%;
+    top: 42%;
+    text-align: center;
+}
+
+/*　kitchen ↑　*/
+
+
+/*　study ↓　*/
+
+#popup-on-book {
+    display: none;
+}
+
+/* チェックされたらポップアップウインドウを開く */
+#popup-on-book:checked + .popup {
+    display: block;
+}
+
+.btn-open-book {
+
+    color: #fff;
+    position: absolute;
+    cursor: pointer;
+    right: 75%;
+    top: 35%;
+    text-align: center;
+}
+
+
+.f-book {
+    display: none;
+    position: absolute;
+    top: -190px;
+    right: -190px;
+}
+
+
+.layer-img:hover + .f-book {
+    display: block;
+}
+
+
+#popup-on-hobby {
+    display: none;
+}
+
+/* チェックされたらポップアップウインドウを開く */
+#popup-on-hobby:checked + .popup {
+    display: block;
+}
+
+.btn-open-hobby {
+
+    color: #fff;
+    position: absolute;
+    cursor: pointer;
+    right: 6%;
+    top: 31%;
+    text-align: center;
+}
+
+
+.f-hobby {
+    display: none;
+    position: absolute;
+    right: 70px;
+    top: -110px;
+}
+
+.layer-img:hover + .f-hobby {
+    display: block;
+}
+
+
+/*　study ↑　*/
+
+
+
+
+
+.column #first {
+
+    background-image: url(first.png);
+    height: 100vh;
+    background-size: 100% auto;
+    background-size: auto 100%;
+    color: #8C6239;
+    font-size: 60px;
+    font-family: 'Noto Serif JP', serif;
+}
+
+
+.column #explan {
+
+    background-image: url(explan.png);
+    height: 100vh;
+    background-size: 100% auto;
+ 
+    color: #8C6239;
+    font-size: 60px;
+    font-family: 'Noto Serif JP', serif;
+}
+
+
+
+
+.column #living {
+
+    background-image: url(living.png);
+    height: 100vh;
+    
+    background-size: cover;
+    
+
+}
+
+
+.column #kitchen {
+
+    background-image: url(kitchen.png);
+    height: 100vh;
+    background-size: 100% auto;
+    background-size: auto 100%;
+
+}
+
+
+
+
+.column #study {
+
+    background-image: url(study.png);
+    height: 100vh;
+    background-size: 100%;
+
+}
+
+
+
+.column #end {
+
+    background-image: url(end.png);
+    height: 100vh;
+    background-size: 100% auto;
+    background-size: auto 100%;
+     color: #8C6239;
+
+}
+
+
+.fade {
+
+    animation: fadeIn 0.2s ease 0.3s 1 normal;
+
+}
+
+@keyframes fadeIn {
+    /*animetion-nameで設定した値を書く*/
+
+    0% {
+        opacity: 0
+    }
+
+    /*アニメーション開始時は不透明度0%*/
+
+    100% {
+        opacity: 1
+    }
+
+    /*アニメーション終了時は不透明度100%*/
+
+}
+
+
+#contentContainer {
+    width: 100%;
+}
+
+#contentContainer ul,
+#contentContainer li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#columnContainer {
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    height: 100vh;
+}
+
+#columnContainer .column {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+}
+
+#columnContainer .column_mainContent {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* 縦に長いコンテンツのとき、スクロールバーを表示させる場合は overflow: scrollに設定 */
+    overflow: hidden;
+}
+
+
+
+
+
+#e1 {
+
+    font-size: 65px;
+    text-align: center;
+    padding-top: 250px;
+}
+
+.e1 {
+    font-size: 29px;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.e2 {
+    font-size: 29px;
+    padding-top: 1px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+.fixed {
+  padding: 10px;
+}
+
+.yohaku {
+  height: 100%;
+}
+
+.modal {
+  background: #fff;
+  text-align: center;
+  margin: auto;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 90%;
+  height: 100px;
+  z-index: 100;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+
